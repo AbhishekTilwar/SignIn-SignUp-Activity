@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "825248282006",
+    "firebase_url": "https://alms-a84bd.firebaseio.com",
+    "project_id": "alms-a84bd",
+    "storage_bucket": "alms-a84bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825248282006:android:8d15a1108746831ec799b7",
+        "android_client_info": {
+          "package_name": "com.abhi.androidapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825248282006-kk8d1ug2b20jj7si3ivsv7hcc2n71vfn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.abhi.androidapp",
+            "certificate_hash": "40359011f9a5bbaa3e03066ec3d25da5fa6d1208"
+          }
+        },
+        {
+          "client_id": "825248282006-hb6m8dc54tedl1m0i8s9gsn02cf6ef03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_WT0LtPvk1cqLkegmBdZgAZrJ0tgJ-A8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825248282006-hb6m8dc54tedl1m0i8s9gsn02cf6ef03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
