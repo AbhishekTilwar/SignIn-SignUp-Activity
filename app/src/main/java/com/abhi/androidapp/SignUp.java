@@ -2,6 +2,7 @@ package com.abhi.androidapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.abhi.androidapp.databinding.ActivitySignUpBinding;
 import com.abhi.androidapp.model.User;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,15 +23,17 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 public class SignUp extends AppCompatActivity {
     MaterialEditText editPhone,editPassword,editName;
     Button btnSignUp;
+    ActivitySignUpBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
-        editPassword = (MaterialEditText)findViewById(R.id.editPassword);
-        editName = (MaterialEditText)findViewById(R.id.editName);
-        editPhone = (MaterialEditText)findViewById(R.id.editPhone);
-        btnSignUp=(Button)findViewById(R.id.btnSignUp);
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_sign_up);
+
+        editPassword = (MaterialEditText)binding.editPassword;
+        editName = (MaterialEditText)binding.editName;
+        editPhone = (MaterialEditText)binding.editPhone;
+        btnSignUp=(Button)binding.btnSignUp;
         // init Firebase
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference table_user= database.getReference("user");

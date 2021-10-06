@@ -2,6 +2,7 @@ package com.abhi.androidapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.abhi.androidapp.databinding.ActivitySignInBinding;
 import com.abhi.androidapp.model.User;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -23,15 +25,16 @@ public class SignIn extends AppCompatActivity {
 
     EditText editPhone,editPassword;
     Button btnSignIn;
-
+    ActivitySignInBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
 
-        editPassword = (MaterialEditText)findViewById(R.id.editPassword);
-        editPhone = (MaterialEditText)findViewById(R.id.editPhone);
-        btnSignIn=(Button)findViewById(R.id.btnSignIn);
+        super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_sign_in);
+
+        editPassword = (MaterialEditText)binding.editPassword;
+        editPhone = (MaterialEditText)binding.editPhone;
+        btnSignIn=(Button)binding.btnSignIn;
 
         // init Firebase
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
