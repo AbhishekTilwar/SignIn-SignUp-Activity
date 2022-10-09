@@ -21,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+// Firebase Auth
 public class SignIn extends AppCompatActivity {
 
     EditText editPhone,editPassword;
@@ -63,6 +64,7 @@ public class SignIn extends AppCompatActivity {
                              }
                          }
                          else{
+                             // If User does not exist
                              Toast.makeText(SignIn.this,"User doesn't exist",Toast.LENGTH_SHORT).show();
 
                          }
